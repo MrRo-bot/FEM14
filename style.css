@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  --Pale-Violet: hsl(276, 100%, 81%); /*sub-heading at the top of the app UI*/
+  --Moderate-Violet: hsl(276, 55%, 52%); /*chat on the left*/
+  --Desaturated-Dark-Violet: hsl(271, 15%, 43%); /*chat on the right*/
+  --Grayish-Blue: hsl(206, 6%, 79%); /*placeholder text*/
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%); /*main heading*/
+  --Dark-Grayish-Violet: hsl(270, 7%, 64%); /*paragraph*/
+
+  /*These two colors are the vibrant background colors you see
+  throughout the design and are applied as a linear gradient*/
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+
+  /*Secondary colors*/
+  --White: hsl(0, 0%, 100%);
+  --Light-Grayish-Violet: hsl(270, 20%, 96%); /*app background*/
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  /*submit button background*/
+  --Very-Light-Magenta: hsl(289, 100%, 72%); /*radio button outline*/
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+[class$="-shape"] {
+  position: absolute;
+  width: 40em;
+  height: 80em;
+  border-radius: 5000000px;
+}
+
+.left-shape {
+  background: linear-gradient(var(--Light-Magenta), var(--Light-Violet));
+  top: -50em;
+  left: -28em;
+}
+
+.right-shape {
+  background: hsl(276, 60%, 90%, 0.2);
+  top: 20em;
+  right: -28em;
+}
+
+.container {
+  width: 80%;
+  max-width: 55em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin: 2em auto;
+  position: relative;
+}
+
+/*MOBILE SCREEN STYLING===============================*/
+.screen {
+  box-shadow: 0 0 0 0.6em var(--White),
+    rgba(50, 50, 93, 0.35) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.45) 0px 18px 36px -18px;
+  width: 13em;
+  height: 28em;
+  border-radius: 20px;
+  background: var(--Light-Grayish-Violet);
+  overflow: hidden;
+  position: relative;
+}
+
+/*background gradient*/
+
+.profile {
+  display: grid;
+  grid-template-columns: 10% 15% 65% 10%;
+  align-items: flex-end;
+  width: 100%;
+  height: 4em;
+  border-radius: 5px;
+  background: linear-gradient(
+    -90deg,
+    var(--Light-Magenta),
+    var(--Light-Violet)
+  );
+}
+
+.notch {
+  position: absolute;
+  top: -1em;
+  left: 20%;
+  right: 20%;
+  background: var(--White);
+  height: 2em;
+  border-radius: 50px;
+}
+
+.back {
+  width: 1em;
+  height: 1em;
+  margin-bottom: 0.85em;
+  margin-left: 0.3em;
+}
+
+.back img,
+.img-profile img,
+.dot img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-profile {
+  border: 2px solid var(--Grayish-Blue);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 1.5em;
+  height: 1.5em;
+  margin-bottom: 0.6em;
+  top: 0;
+}
+
+.status p {
+  font-weight: 500;
+  color: hsl(276, 60%, 90%);
+  font-size: 0.7rem;
+  margin-bottom: 0.2em;
+}
+
+.status span {
+  display: block;
+  color: var(--Pale-Violet);
+  font-size: 0.5rem;
+  margin-bottom: 1.2em;
+}
+
+.dot {
+  width: 0.5em;
+  height: 1em;
+  transform: rotate(90deg);
+  margin-bottom: 1em;
+}
+
+.chat-header1,
+.chat-header2,
+.chat-header3 {
+  font-size: 0.5rem;
+  width: 16em;
+  margin: 1em;
+  padding: 1em;
+}
+
+.chat-header1 {
+  color: var(--Moderate-Violet);
+
+  background: hsl(180, 9%, 91%);
+  border-radius: 10px 10px 10px 5px;
+}
+
+.img-dog {
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img-dog img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.dog1 {
+  right: 6.5em;
+}
+
+.dog2 {
+  right: 3.5em;
+}
+
+.dog3 {
+  right: 0.5em;
+}
+
+.chat-header2 {
+  position: absolute;
+  color: var(--Desaturated-Dark-Violet);
+  background: var(--White);
+  border-radius: 10px 10px 5px 10px;
+  right: 0em;
+}
+
+.one {
+  top: 25em;
+}
+
+.two {
+  width: 10em;
+  top: 30.5em;
+}
+
+.last {
+  position: absolute;
+  top: 35em;
+}
+
+.chat-header3 {
+  display: grid;
+  grid-template-columns: 15% 65% 10%;
+  width: 19em;
+  align-items: center;
+  position: absolute;
+  border-radius: 10px 10px 10px 5px;
+  background: linear-gradient(90deg, var(--Light-Magenta), var(--Light-Violet));
+}
+
+.circle {
+  border: 2px solid var(--Very-Light-Magenta);
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.details {
+  color: hsl(276, 60%, 90%);
+}
+
+span strong {
+  color: var(--White);
+  font-size: 0.7rem;
+}
+
+.header3-1 {
+  top: 41.5em;
+}
+
+.header3-2 {
+  top: 46em;
+}
+
+.textfield {
+  position: absolute;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 87% 10%;
+  width: 94%;
+  height: 1.8em;
+  border-radius: 5000px;
+  bottom: 0.3em;
+  left: 0.4em;
+  background: var(--White);
+}
+
+.placeholder {
+  color: var(--Grayish-Blue);
+  font-size: 0.5rem;
+  margin-left: 2em;
+}
+
+.send {
+  background: var(--Very-Dark-Desaturated-Violet);
+  border-radius: 50%;
+  width: 1.3em;
+  height: 1.3em;
+}
+
+/*BOTTOM DETAILS====================================*/
+h1 {
+  margin: 0.7em auto;
+  font-weight: 500;
+  text-align: center;
+  color: var(--Very-Dark-Desaturated-Violet);
+}
+
+.intro p {
+  text-align: center;
+  color: var(--Dark-Grayish-Violet);
+  font-size: 0.9rem;
+  line-height: 1.6em;
+}
+
+/*BOTTOM DESCRIPTION================================*/
+.attribution {
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*MEDIA QUERIES====================================*/
+
+@media screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  [class$="-shape"] {
+    width: 40em;
+    height: 80em;
+  }
+
+  .left-shape {
+    top: -40em;
+    left: -9em;
+  }
+
+  .right-shape {
+    right: -10em;
+    top: 10em;
+  }
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .container > div {
+    width: 50%;
+  }
+
+  .screen {
+    margin: 0 auto;
+  }
+
+  h1,
+  .intro p {
+    text-align: left;
+  }
+}
