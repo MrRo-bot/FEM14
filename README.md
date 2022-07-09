@@ -14,7 +14,7 @@
 
 ## Overview
 
-Creating a Chat App CSS Illustration
+Created INTERMEDIATE Chat App CSS Illustration
 
 ### The challenge
 
@@ -26,8 +26,9 @@ Using every CSS basic features
 
 ### Links
 
-- GITHUB REPO: [https://github.com/MrRo-bot/FEM14]
-- Solution URL: [https://codepen.io/Mr-RO13OT/pen/BaWNOYZ]
+- GITHUB REPO: [https://github.com/MrRo-bot/chat-app-css-illustration]
+
+- Solution URL: [https://codepen.io/Mr-RO13OT/full/BaWNOYZ]
 
 ## My process
 
